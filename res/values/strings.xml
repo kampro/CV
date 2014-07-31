@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CV</string>
+    <string name="cv">Curriculum vitae</string>
+    <string name="personal_data">Dane osobowe</string>
+    <string name="agreement">Wyrażam zgodę na przetwarzanie moich danych osobowych w celach rekrutacji, zgodnie z Ustawą z dn. 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2002 r. Nr 101, poz. 926 z późniejszymi zmianami).</string>
+    <string name="schools">Wykształcenie</string>
+    <string name="experience">Doświadczenie</string>
+    <string name="additional_skills">Dodatkowe umiejętności</string>
+    <string name="languages">Języki obce</string>
+    <string name="hobby">Zainteresowania</string>
+    <string name="close">Zamknij</string>
+    <string name="personal_details">sensitive data</string>
+
+</resources>
