@@ -1,5 +1,6 @@
 package com.kamilprokop.cv;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.CursorWrapper;
@@ -72,59 +73,85 @@ public class DBHelper extends SQLiteOpenHelper
 		return new EntryCursor(c);
 	}
 
-	/*
-	 * public void initDB() { ContentValues cv = new ContentValues();
-	 * cv.put("category", "schools"); cv.put("position", 0);
-	 * cv.put("annotation", "10.2012-07.2014"); cv.put("header",
-	 * "Uniwersytet Śląski w Katowicach"); cv.put("content",
-	 * "Sosnowiec, Informatyka, magisterskie, stacjonarne");
-	 * getWritableDatabase().insert("entries", null, cv);
-	 * 
-	 * cv = new ContentValues(); cv.put("category", "schools");
-	 * cv.put("position", 1); cv.put("annotation", "10.2009-06.2012");
-	 * cv.put("header", "Uniwersytet Śląski w Katowicach"); cv.put("content",
-	 * "Katowice, Informatyka, licencjackie, stacjonarne");
-	 * getWritableDatabase().insert("entries", null, cv);
-	 * 
-	 * cv = new ContentValues(); cv.put("category", "experience");
-	 * cv.put("position", 0); cv.put("annotation", "2007-2014");
-	 * cv.put("header", "Freelancer"); cv.put("content",
-	 * "Software Developer, Web Developer.\nC# (.NET, Windows Phone, Mono),\nJava (SE, Android),\nC++ (Qt),\nPHP (Kohana, CodeIgniter, komponenty Joomla!),\nHTML, CSS, jQuery, JavaScript,\nMySQL, SQLite."
-	 * ); getWritableDatabase().insert("entries", null, cv);
-	 * 
-	 * cv = new ContentValues(); cv.put("category", "experience");
-	 * cv.put("position", 1); cv.put("annotation", "09.2011"); cv.put("header",
-	 * "Miejska Biblioteka Publiczna w Jaworznie"); cv.put("content",
-	 * "Praktykant w Dziale IT.\nInstalacja urządzeń sieciowych, nadzór nad rozwiązaniami IT, instalacja i aktualizacja\nsystemów operacyjnych, wdrażanie oprogramowania, wsparcie dla użytkowników."
-	 * ); getWritableDatabase().insert("entries", null, cv);
-	 * 
-	 * cv = new ContentValues(); cv.put("category", "additional");
-	 * cv.put("position", 0); cv.put("annotation", "zdane egzaminy");
-	 * cv.put("header", ""); cv.put("content",
-	 * "ITA-105: Programowanie Obiektowe\nITA-102: Hurtownie Danych\nOffice ePack by Onex: Windows 7\nPrawo jazdy kat. B"
-	 * ); getWritableDatabase().insert("entries", null, cv);
-	 * 
-	 * cv = new ContentValues(); cv.put("category", "additional");
-	 * cv.put("position", 1); cv.put("annotation", "inne"); cv.put("header",
-	 * ""); cv.put("content",
-	 * "praca z relacyjnymi bazami danych\nznajomość systemu kontroli wersji Git\nznajomość systemu operacyjnego Linux"
-	 * ); getWritableDatabase().insert("entries", null, cv);
-	 * 
-	 * cv = new ContentValues(); cv.put("category", "languages");
-	 * cv.put("position", 0); cv.put("annotation", "angielski");
-	 * cv.put("header", ""); cv.put("content", "B1");
-	 * getWritableDatabase().insert("entries", null, cv);
-	 * 
-	 * cv = new ContentValues(); cv.put("category", "languages");
-	 * cv.put("position", 1); cv.put("annotation", "niemiecki");
-	 * cv.put("header", ""); cv.put("content", "A1");
-	 * getWritableDatabase().insert("entries", null, cv);
-	 * 
-	 * cv = new ContentValues(); cv.put("category", "hobby"); cv.put("position",
-	 * 0); cv.put("annotation", ""); cv.put("header", ""); cv.put("content",
-	 * "kolarstwo,\nmotoryzacja,\nmechanika,\nsprzęt elektroniczny.");
-	 * getWritableDatabase().insert("entries", null, cv); }
-	 */
+	public void initDB()
+	{
+		ContentValues cv = new ContentValues();
+		cv.put("category", "schools");
+		cv.put("position", 0);
+		cv.put("annotation", "10.2012-07.2014");
+		cv.put("header", "Uniwersytet Śląski w Katowicach");
+		cv.put("content", "Sosnowiec, Informatyka, magisterskie, stacjonarne");
+		getWritableDatabase().insert("entries", null, cv);
+
+		cv = new ContentValues();
+		cv.put("category", "schools");
+		cv.put("position", 1);
+		cv.put("annotation", "10.2009-06.2012");
+		cv.put("header", "Uniwersytet Śląski w Katowicach");
+		cv.put("content", "Katowice, Informatyka, licencjackie, stacjonarne");
+		getWritableDatabase().insert("entries", null, cv);
+
+		cv = new ContentValues();
+		cv.put("category", "experience");
+		cv.put("position", 0);
+		cv.put("annotation", "2007-2014");
+		cv.put("header", "Freelancer");
+		cv.put("content",
+				"Software Developer, Web Developer.\nC# (.NET, Windows Phone, Mono),\nJava (SE, Android),\nC++ (Qt),\nPHP (Kohana, CodeIgniter, komponenty Joomla!),\nHTML, CSS, jQuery, JavaScript,\nMySQL, SQLite.");
+		getWritableDatabase().insert("entries", null, cv);
+
+		cv = new ContentValues();
+		cv.put("category", "experience");
+		cv.put("position", 1);
+		cv.put("annotation", "09.2011");
+		cv.put("header", "Miejska Biblioteka Publiczna w Jaworznie");
+		cv.put("content",
+				"Praktykant w Dziale IT.\nInstalacja urządzeń sieciowych, nadzór nad rozwiązaniami IT, instalacja i aktualizacja\nsystemów operacyjnych, wdrażanie oprogramowania, wsparcie dla użytkowników.");
+		getWritableDatabase().insert("entries", null, cv);
+
+		cv = new ContentValues();
+		cv.put("category", "additional");
+		cv.put("position", 0);
+		cv.put("annotation", "zdane egzaminy");
+		cv.put("header", "");
+		cv.put("content",
+				"ITA-105: Programowanie Obiektowe\nITA-102: Hurtownie Danych\nOffice ePack by Onex: Windows 7\nPrawo jazdy kat. B");
+		getWritableDatabase().insert("entries", null, cv);
+
+		cv = new ContentValues();
+		cv.put("category", "additional");
+		cv.put("position", 1);
+		cv.put("annotation", "inne");
+		cv.put("header", "");
+		cv.put("content",
+				"praca z relacyjnymi bazami danych\nznajomość systemu kontroli wersji Git\nznajomość systemu operacyjnego Linux");
+		getWritableDatabase().insert("entries", null, cv);
+
+		cv = new ContentValues();
+		cv.put("category", "languages");
+		cv.put("position", 0);
+		cv.put("annotation", "angielski");
+		cv.put("header", "");
+		cv.put("content", "B1");
+		getWritableDatabase().insert("entries", null, cv);
+
+		cv = new ContentValues();
+		cv.put("category", "languages");
+		cv.put("position", 1);
+		cv.put("annotation", "niemiecki");
+		cv.put("header", "");
+		cv.put("content", "A1");
+		getWritableDatabase().insert("entries", null, cv);
+
+		cv = new ContentValues();
+		cv.put("category", "hobby");
+		cv.put("position", 0);
+		cv.put("annotation", "");
+		cv.put("header", "");
+		cv.put("content",
+				"kolarstwo,\nmotoryzacja,\nmechanika,\nsprzęt elektroniczny.");
+		getWritableDatabase().insert("entries", null, cv);
+	}
 
 	public static class EntryCursor extends CursorWrapper
 	{
